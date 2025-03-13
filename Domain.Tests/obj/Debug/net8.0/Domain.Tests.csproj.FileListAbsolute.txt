@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\xunitTest\Domain.Tests\bin\Debug\net8.0\Domain.Tests.deps.json
+C:\Users\User\source\repos\xunitTest\Domain.Tests\bin\Debug\net8.0\Domain.Tests.dll
+C:\Users\User\source\repos\xunitTest\Domain.Tests\bin\Debug\net8.0\Domain.Tests.pdb
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\Domain.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\Domain.Tests.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\Domain.Tests.AssemblyInfo.cs
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\Domain.Tests.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\Domain.Tests.dll
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\refint\Domain.Tests.dll
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\Domain.Tests.pdb
+C:\Users\User\source\repos\xunitTest\Domain.Tests\obj\Debug\net8.0\ref\Domain.Tests.dll
