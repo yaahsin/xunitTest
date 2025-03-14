@@ -21,7 +21,7 @@ namespace Application.Tests
         [Theory]
         [InlineData("a@email.com", 2)]
         [InlineData("b@email.com", 2)]
-        public void Booksw_flights(string email, int seats)
+        public void Remembers_bookings(string email, int seats)
         {
 
             var flight = new Flight(3);
@@ -33,7 +33,7 @@ namespace Application.Tests
 
         [Theory]
         [InlineData(3)]
-        public void Cancel_booking(int initialCapacity)
+        public void Frees_up_seats_after_booking(int initialCapacity)
         {
 
             // given
