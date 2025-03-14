@@ -7,81 +7,47 @@ namespace Application.Tests
 {
     public class FlightApplicationSpecifications
     {
+
+        readonly Entities entities = new Entities(new DbContextOptionsBuilder<Entities>()
+                .UseInMemoryDatabase("Flights")
+                .Options);
+        readonly BookingService bookingService;
+
+        public FlightApplicationSpecifications()
+        {
+            bookingService = new BookingService(entities);
+        }
+
         [Theory]
         [InlineData("a@email.com", 2)]
         [InlineData("b@email.com", 2)]
         public void Booksw_flights(string email, int seats)
         {
 
-            var entities = new Entities(new DbContextOptionsBuilder<Entities>()
-                .UseInMemoryDatabase("Flights")
-                .Options);
             var flight = new Flight(3);
             entities.Flights.Add(flight);
 
-            var bookingService = new BookingService(entities);
             bookingService.Book(new BookDto(flight.Id, email, seats));
             bookingService.FindBookings(flight.Id).Should().ContainEquivalentOf(new BookingRm(email, seats));
         }
-    }
 
-    public class BookingService
-    {
-        public Entities Entities { get; set; }
-
-        public BookingService(Entities entities)
+        [Theory]
+        [InlineData(3)]
+        public void Cancel_booking(int initialCapacity)
         {
-            this.Entities = entities;
-        }
 
+            // given
+            var flight = new Flight(initialCapacity);
+            entities.Flights.Add(flight);
 
-        public void Book(BookDto bookDto)
-        {
-            var flight = Entities.Flights.Find(bookDto.FllightId);
-            flight.Book(bookDto.email, bookDto.seats);
-            Entities.SaveChanges();
+            bookingService.Book(new BookDto(flight.Id, "email@email.com", 2));
 
-        }
-
-        public IEnumerable<BookingRm> FindBookings(Guid flightId)
-        {
-            return Entities.Flights
-                .Find(flightId)
-                .BookingList
-                .Select(booking => new BookingRm(
-                    booking.Email,
-                    booking.NumberOfSeats
-                    ));
+            // when
+            bookingService.CancelBooking(
+                new CancelBookingDto(Guid.NewGuid(), "email@email.com", 2)
+                );
+            // then
+            bookingService.GetRemainingNumberOfSeatsFor(flight.Id).Should().Be(initialCapacity);
         }
     }
-
-    public class BookDto
-    {
-        public Guid FllightId { get; set; }
-        public string email { get; set; }
-        public int seats { get; set; }
-
-        public BookDto(Guid flightId, string email, int seats)
-        {
-            this.FllightId = flightId;
-            this.email = email;
-            this.seats = seats;
-
-        }
-    }
-
-    public class BookingRm
-    {
-        public string PassengerEmail { get; set; }
-        public int NumberOfSeats { get; set; }
-
-        public BookingRm(string email, int seats)
-        {
-            this.PassengerEmail = email;
-            this.NumberOfSeats = seats;
-        }
-    }
-
-
-
 }
