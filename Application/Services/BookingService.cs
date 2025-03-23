@@ -1,7 +1,8 @@
-﻿using Application.Tests;
+﻿using Application.Models;
+using Application.Tests;
 using Data;
 
-namespace Application
+namespace Application.Services
 {
     public class BookingService
     {

@@ -6176,43 +6176,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/monica/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\xunitTest\\Application.Tests\\Application.Tests.csproj",
+      "projectUniqueName": "/Users/monica/Desktop/xunitTest/Application.Tests/Application.Tests.csproj",
       "projectName": "Application.Tests",
-      "projectPath": "C:\\Users\\User\\source\\repos\\xunitTest\\Application.Tests\\Application.Tests.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\xunitTest\\Application.Tests\\obj\\",
+      "projectPath": "/Users/monica/Desktop/xunitTest/Application.Tests/Application.Tests.csproj",
+      "packagesPath": "/Users/monica/.nuget/packages/",
+      "outputPath": "/Users/monica/Desktop/xunitTest/Application.Tests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/monica/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\xunitTest\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\xunitTest\\Application\\Application.csproj"
+            "/Users/monica/Desktop/xunitTest/Application/Application.csproj": {
+              "projectPath": "/Users/monica/Desktop/xunitTest/Application/Application.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\xunitTest\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\xunitTest\\Data\\Data.csproj"
+            "/Users/monica/Desktop/xunitTest/Data/Data.csproj": {
+              "projectPath": "/Users/monica/Desktop/xunitTest/Data/Data.csproj"
             }
           }
         }
@@ -6273,7 +6265,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.309/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
